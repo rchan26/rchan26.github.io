@@ -38,7 +38,7 @@ class MetropolisHastings():
                 self.current_log_post = log_post
             else:
                 self.chain.append(self.chain[-1])
-    
+
     def plot_current_status(self, dirname, x, ap, iteration = 0, theta_star = None, accepted = None):
         current = self.chain[-1]
         if accepted is None:
@@ -47,7 +47,7 @@ class MetropolisHastings():
             proposal_colour = 'green'
         else:
             proposal_colour = 'red'
-        
+
         # plot the proposal step with densities
         plot = plt.subplots(1, 2, figsize=(12,8))
         plt.subplot(1, 2, 1)
@@ -65,7 +65,7 @@ class MetropolisHastings():
         plt.xlabel(r"$\theta$")
         plt.ylabel("density")
         plt.title("Proposal step")
-        
+
         # plot the trace plot
         plt.subplot(1, 2, 2)
         plt.plot(range(len(self.chain)), self.chain, color = 'blue')
@@ -84,11 +84,11 @@ class MetropolisHastings():
         plt.xlabel("iteration")
         plt.ylabel(r"$\theta$")
         plt.title(f"Trace plot. AP of moving to proposed = {ap}")
-        
+
         if not os.path.exists(dirname):
             os.makedirs(dirname)
         plot[0].savefig(dirname+f"/test_{iteration}.png")
-                    
+
     def MH_step_plot(self, dirname, x):
         # sample from uniform distribution
         u = np.random.uniform(0.0, 1.0)
@@ -100,14 +100,14 @@ class MetropolisHastings():
         log_numerator = log_post + self.log_proposal_density(self.chain[-1], theta_star)
         log_denominator = self.current_log_post + self.log_proposal_density(theta_star, self.chain[-1])
         log_alpha = log_numerator - log_denominator
-        
+
         ##### plot current status
         self.plot_current_status(dirname = dirname,
                                  x = x,
                                  ap = round(min([1, math.exp(log_alpha)]), 5),
                                  iteration = 2*(len(self.chain)-1),
                                  theta_star = theta_star)
-        
+
         # accept / reject new sample
         if (np.log(u) < log_alpha):
             self.plot_current_status(dirname = dirname,
