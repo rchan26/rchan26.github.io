@@ -108,7 +108,7 @@
       '<span class="title">' +
       $("#logo").html() +
       "</span>" +
-      "</div>"
+      "</div>",
   ).appendTo($body);
 
   // Panel.
