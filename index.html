@@ -12,6 +12,32 @@
       rel="stylesheet"
     />
     <style>
+      :root {
+        --bg: #fefae0;
+        --text: #2c2c2c;
+        --muted: #7a6e58;
+        --h2-color: #7a6e58;
+        --border: #c8c0a8;
+        --link-underline: #bbb;
+        --link-underline-hover: #2c2c2c;
+        --font: "Gowun Batang", Georgia, serif;
+        --font-size: 17px;
+        --line-height: 1.8;
+      }
+
+      [data-theme="dark"] {
+        --bg: #002b36;
+        --text: #eee8d5;
+        --muted: #586e75;
+        --h2-color: #93a1a1;
+        --border: #657b83;
+        --link-underline: #268bd2;
+        --link-underline-hover: #2aa198;
+        --font: "Lucida Console", "Courier New", monospace;
+        --font-size: 16px;
+        --line-height: 1.6;
+      }
+
       *,
       *::before,
       *::after {
@@ -21,21 +47,45 @@
       }
 
       html {
-        font-size: 17px;
+        font-size: var(--font-size);
       }
 
       body {
-        font-family: "Gowun Batang", Georgia, serif;
-        background: #fefae0;
-        color: #2c2c2c;
-        line-height: 1.8;
+        font-family: var(--font);
+        background: var(--bg);
+        color: var(--text);
+        line-height: var(--line-height);
         padding: 0 1.5rem;
+        transition:
+          background 0.2s,
+          color 0.2s;
       }
 
       .container {
         max-width: 700px;
         margin: 0 auto;
         padding: 4rem 0 6rem;
+      }
+
+      /* Theme toggle */
+      #theme-toggle {
+        position: fixed;
+        top: 1.25rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: var(--font);
+        font-size: 0.8rem;
+        color: var(--muted);
+        padding: 0;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-color: var(--border);
+      }
+
+      #theme-toggle:hover {
+        color: var(--text);
       }
 
       /* Header */
@@ -62,7 +112,7 @@
       }
 
       .header-text .role {
-        color: #7a6e58;
+        color: var(--muted);
         font-size: 0.95rem;
         margin-bottom: 0.6rem;
       }
@@ -77,7 +127,7 @@
       /* Dividers */
       hr {
         border: none;
-        border-top: 1px solid #c8c0a8;
+        border-top: 1px solid var(--border);
         margin: 2.5rem 0;
       }
 
@@ -87,7 +137,7 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        color: #7a6e58;
+        color: var(--h2-color);
         margin-bottom: 1.1rem;
       }
 
@@ -129,12 +179,12 @@
         color: inherit;
         text-decoration: underline;
         text-underline-offset: 3px;
-        text-decoration-color: #bbb;
+        text-decoration-color: var(--link-underline);
         transition: text-decoration-color 0.15s;
       }
 
       a:hover {
-        text-decoration-color: #2c2c2c;
+        text-decoration-color: var(--link-underline-hover);
       }
 
       /* Publications */
@@ -146,7 +196,7 @@
       .pub-list li {
         padding-bottom: 0.85rem;
         margin-bottom: 0.85rem;
-        border-bottom: 1px solid #c8c0a8;
+        border-bottom: 1px solid var(--border);
       }
 
       .pub-list li:last-child {
@@ -158,7 +208,7 @@
       /* Footer */
       footer {
         font-size: 0.85rem;
-        color: #9e9278;
+        color: var(--muted);
       }
 
       footer hr {
@@ -178,6 +228,7 @@
     </style>
   </head>
   <body>
+    <button id="theme-toggle" aria-label="Toggle theme">dark</button>
     <div class="container">
       <header>
         <img class="avatar" src="images/profile.jpg" alt="Ryan Chan" />
@@ -787,5 +838,20 @@
         </p>
       </footer>
     </div>
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      const saved = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", saved);
+      toggle.textContent = saved === "dark" ? "light" : "dark";
+      toggle.addEventListener("click", () => {
+        const next =
+          document.documentElement.getAttribute("data-theme") === "dark"
+            ? "light"
+            : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+        toggle.textContent = next === "dark" ? "light" : "dark";
+      });
+    </script>
   </body>
 </html>
