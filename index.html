@@ -1,819 +1,791 @@
 <!doctype html>
-<!--
-    Read Only by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
   <head>
-    <title>Ryan Chan</title>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ryan Chan</title>
+    <link rel="icon" href="images/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="icon" href="https://rchan26.github.io/images/icon.png" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-size: 17px;
+      }
+
+      body {
+        font-family: "Gowun Batang", Georgia, serif;
+        background: #fefae0;
+        color: #2c2c2c;
+        line-height: 1.8;
+        padding: 0 1.5rem;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 4rem 0 6rem;
+      }
+
+      /* Header */
+      header {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+
+      .header-text h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+      }
+
+      .header-text .role {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .header-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 1.25rem;
+        font-size: 0.9rem;
+      }
+
+      /* Dividers */
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 2.5rem 0;
+      }
+
+      /* Section headings */
+      h2 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #888;
+        margin-bottom: 1.1rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 1.6rem 0 0.5rem;
+      }
+
+      h3:first-of-type {
+        margin-top: 0;
+      }
+
+      /* Prose */
+      p {
+        margin-bottom: 1rem;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Lists */
+      ul {
+        padding-left: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      ul:last-child {
+        margin-bottom: 0;
+      }
+
+      li {
+        margin-bottom: 0.4rem;
+      }
+
+      /* Links */
+      a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-color: #bbb;
+        transition: text-decoration-color 0.15s;
+      }
+
+      a:hover {
+        text-decoration-color: #2c2c2c;
+      }
+
+      /* Publications */
+      .pub-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .pub-list li {
+        padding-bottom: 0.85rem;
+        margin-bottom: 0.85rem;
+        border-bottom: 1px solid #e8e4df;
+      }
+
+      .pub-list li:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      /* Footer */
+      footer {
+        font-size: 0.85rem;
+        color: #aaa;
+      }
+
+      footer hr {
+        margin-bottom: 1.25rem;
+      }
+
+      @media (max-width: 480px) {
+        header {
+          flex-direction: column;
+        }
+
+        .avatar {
+          width: 64px;
+          height: 64px;
+        }
+      }
+    </style>
   </head>
-  <body class="is-preload">
-    <section id="header">
+  <body>
+    <div class="container">
       <header>
-        <span class="image avatar"
-          ><img src="images/profile.jpg" alt=""
-        /></span>
-        <h1 id="logo"><a href="#">Ryan Chan</a></h1>
-        <p>Senior Researcher<br /></p>
-        <p>PhD Statistics (University of Warwick)<br /></p>
-        <p>MMath (University of Leeds)<br /></p>
-        <p>Email: ryanchan2607 [at] gmail.com</p>
-        <br />
-        <p>
-          <a href="https://github.com/rchan26">GitHub</a>
-        </p>
-        <p>
-          <a href="https://www.linkedin.com/in/ryan-chan-2607/">LinkedIn</a>
-        </p>
-        <br />
-        <p>
-          <a
-            href="https://rchan26.github.io/pdfs/miscellaneous/curriculum_vitae.pdf"
-            target="_blank"
-            >Curriculum Vitae</a
-          >
-        </p>
-      </header>
-    </section>
-
-    <div id="wrapper">
-      <div id="main">
-        <section id="one">
-          <div class="image main" data-position="center">
-            <img
-              src="images/shot_charts.jpg"
-              alt="Shot charts of Allen Iverson 2005-06 vs. James Harden 2018-19. Taken from Kirk Goldsberry's Twitter: https://twitter.com/kirkgoldsberry/status/1108030357570371584"
-            />
+        <img class="avatar" src="images/profile.jpg" alt="Ryan Chan" />
+        <div class="header-text">
+          <h1>Ryan Chan</h1>
+          <p class="role">
+            Senior Researcher &middot; The Alan Turing Institute
+          </p>
+          <div class="header-links">
+            <a href="https://github.com/rchan26">GitHub</a>
+            <a href="https://www.linkedin.com/in/ryan-chan-2607/">LinkedIn</a>
+            <a
+              href="https://scholar.google.co.uk/citations?user=P9x-aK0AAAAJ&hl=en"
+              >Google Scholar</a
+            >
+            <a
+              href="https://rchan26.github.io/pdfs/miscellaneous/curriculum_vitae.pdf"
+              target="_blank"
+              >CV</a
+            >
+            <a href="mailto:ryanchan2607@gmail.com">Email</a>
           </div>
-          <div class="container">
-            <p>
-              I'm a senior research associate focusing on end-to-end
-              machine-learning weather forecasting. In particular, I'm working
-              on <em>Project Cumulus</em>, an initiative to develop bespoke data
-              driven weather subseasonal forecasting systems tailored for
-              farming communities in West Africa.
-            </p>
-            <p>
-              I have a background in statistics, machine learning and software
-              engineering. I hold a PhD in Statistics from the
-              <a href="https://warwick.ac.uk/fac/sci/statistics/"
-                >University of Warwick</a
-              >, supervised by
-              <a
-                href="https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/roberts/"
-                >Professor Gareth Roberts</a
-              >
-              and
-              <a
-                href="https://www.ncl.ac.uk/maths-physics/people/profile/murraypollock.html"
-                >Professor Murray Pollock</a
-              >. In my PhD, I focused on developing Monte Carlo methods for
-              combining distributed statistical analyses (<em
-                ><a href="https://jmlr.org/papers/v24/21-1274.html"
-                  >Fusion</a
-                ></em
-              >). I completed my undergraduate studies at the
-              <a href="https://eps.leeds.ac.uk/maths">University of Leeds</a>,
-              where I was awarded a first class honours MMath Mathematics degree
-              and received the Royal Statistical Society Prize.
-            </p>
-          </div>
-        </section>
-
-        <section id="one">
-          <div class="container">
-            <h3>Research & Projects</h3>
-            <p>
-              I am interested in applying machine learning to environment and
-              sustainability problems and currently focusing on end-to-end
-              data-driven weather forecasting.
-            </p>
-            <ul>
-              <li>
-                Project Cumulus: Data-driven forecasting systems to support
-                farming communities in West Africa
-                <ul>
-                  <li>
-                    Leading development of observationally driven models for
-                    global sub-seasonal forecasting.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <h4>Previous projects</h4>
-
-            <ul>
-              <li>
-                <a
-                  href="https://www.turing.ac.uk/research/research-projects/fastnet"
-                  >FastNet: AI for Numerical Weather Prediction (AI4NWP)</a
-                >
-                <ul>
-                  <li>
-                    <em>FastNet</em> is a Graph Neural Network for medium-range
-                    weather forecasting, developed in collaboration between the
-                    Met Office and The Alan Turing Institute. You can read more
-                    about the model in the
-                    <a href="https://arxiv.org/abs/2509.17658"
-                      >FastNet technical report</a
-                    >
-                    and
-                    <a href="https://arxiv.org/abs/2509.17601"
-                      >loss function design pre-print</a
-                    >.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a
-                  href="https://www.turing.ac.uk/research/research-projects/project-t0"
-                  >Project t0</a
-                >
-                <ul>
-                  <li>
-                    Focused on developing lean yet capable language models
-                    utilising knowledge retrieval and fine-tuning for reasoning
-                    and test-time scaling. You can read more about the project
-                    in this
-                    <a
-                      href="https://www.turing.ac.uk/blog/why-we-still-need-small-language-models-even-age-frontier-ai"
-                      >blog post</a
-                    >
-                    and our
-                    <a href="https://arxiv.org/abs/2508.11386"
-                      >technical report</a
-                    >. The code for the project is available
-                    <a href="https://github.com/alan-turing-institute/t0-1"
-                      >here</a
-                    >.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="https://github.com/alan-turing-institute/prompto"
-                  >prompto: supporting reproducible experiments on LLMs at
-                  scale</a
-                >
-                <ul>
-                  <li>
-                    <a href="https://github.com/alan-turing-institute/prompto"
-                      ><em>prompto</em></a
-                    >
-                    is an open source software package developed to support
-                    reproducible experiments on Large Language Models at scale.
-                    The tool interacts with self-hosted open source models as
-                    well as proprietary API-based services, making use of
-                    individual rate and token limits, to optimise for
-                    large-scale evaluations.
-                    <a href="https://aclanthology.org/2025.naacl-demo.11/"
-                      >[NAACL 2025 System Demonstrations Paper]</a
-                    >.
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="https://github.com/datasig-ac-uk">Rough Paths</a>
-                <ul>
-                  <li>
-                    Developed software and applications of
-                    <em>Rough Path theory</em> and <em>path signatures</em> - a
-                    mathematical tool for describing complex streams of data in
-                    a structured and standardised way.
-                  </li>
-                  <li>
-                    Worked on applying
-                    <a href="https://arxiv.org/abs/1603.03788"
-                      >path signatures</a
-                    >
-                    in natural language processing problems with the
-                    <a href="https://datasig.ac.uk/people/ryan-chan">DataSig</a>
-                    research team.
-                    <ul>
-                      <li>
-                        <a href="https://github.com/datasig-ac-uk/nlpsig"
-                          ><em>nlpsig</em></a
-                        >: Python library for constructing paths of embeddings
-                        obtained from transformers.
-                      </li>
-                      <li>
-                        <a href="https://github.com/ttseriotou/sig-networks"
-                          ><em>sig-networks</em></a
-                        >: Python/PyTorch library for training
-                        <em>signature</em> neural networks for longitudinal NLP
-                        tasks.
-                        <a href="https://aclanthology.org/2024.eacl-demo.24/"
-                          >[EACL 2024 System Demonstrations Paper]</a
-                        >.
-                      </li>
-                      <li>
-                        <a
-                          href="https://github.com/datasig-ac-uk/signature_mahalanobis_knn"
-                          ><em>SigMahaKNN</em></a
-                        >: Python implementation of an algorithm for anomaly
-                        detection on mulitvariate streams using path signatures
-                        and the variance norm.
-                        <a href="https://arxiv.org/abs/2006.03487">[Paper]</a>.
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="https://github.com/icenet-ai">IceNet</a>
-                <ul>
-                  <li>
-                    <em
-                      ><a
-                        href="https://www.nature.com/articles/s41467-021-25257-4"
-                        >IceNet</a
-                      ></em
-                    >
-                    is a probabilistic, deep learning sea ice forecasting system
-                    developed by an international team and led by British
-                    Antarctic Survey and The Alan Turing Institute.
-                  </li>
-                  <li>
-                    Contributed to the development a machine learning pipeline
-                    for operational use of
-                    <a href="https://github.com/icenet-ai/icenet">IceNet</a>.
-                  </li>
-                  <li>
-                    IceNet was nominated for the
-                    <a
-                      href="https://www.arcticcircle.org/frederik-paulsen-arctic-academic-action-award"
-                      ><em
-                        >Arctic Circle's Frederik Paulsen Arctic Academic Action
-                        Award</em
-                      ></a
-                    >.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <h4>Miscellaneous projects</h4>
-
-            <ul>
-              <li>
-                Maya: Multimodal Aya (<a
-                  href="https://sites.google.com/cohere.com/expedition-aya/home"
-                  >Cohere For AI's Expedition Aya 2024 project</a
-                >)
-              </li>
-              <ul>
-                <li>
-                  I was part of the Maya project that
-                  <a
-                    href="https://www.linkedin.com/posts/cohere-for-ai_c4ai-expedition-aya-most-promising-prize-activity-7242140355003891712-kGkD"
-                    >won the <em>Most Promising Award</em></a
-                  >
-                  at C4AI's Expedition Aya challenge.
-                </li>
-                <li>
-                  We pre-trained and fine-tuned a multilingual multimodal model
-                  based on
-                  <a href="https://cohere.com/research/aya"
-                    >Cohere's Aya model</a
-                  >
-                  and the
-                  <a href="https://llava-vl.github.io/">LLaVA</a> architecture.
-                  <a href="https://openreview.net/pdf?id=C3PsmuhDq0"
-                    >[CVPR 2025 Workshop (Vision Language Models For All)
-                    Paper]</a
-                  >.
-                </li>
-              </ul>
-
-              <li>
-                <a href="https://github.com/alan-turing-institute/reginald"
-                  >Reginald: A friendly Turing Slack bot</a
-                >
-                <ul>
-                  <li>
-                    A side project born out the Research Engineering Team's
-                    Hackweek 2023 at the Turing.
-                  </li>
-                  <li>
-                    Developed a LLM chatbot for the institute which uses
-                    Retrieval Augmented Generation and
-                    <a href="https://github.com/run-llama/llama_index"
-                      >llama-index</a
-                    >
-                    with access to internal and publicly available data for the
-                    institute.
-                  </li>
-                  <li>
-                    It was deployed on the Turing's Slack workspace, as well as
-                    a command-line interface to interact with the model directly
-                    and locally on the terminal.
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                AIrsenal & AIrgentina
-                <ul>
-                  <li>
-                    <a href="https://github.com/alan-turing-institute/AIrsenal"
-                      ><em>AIrsenal</em></a
-                    >
-                    is a Python package for using Machine learning to pick a
-                    Fantasy Premier League team.
-                    <a href="https://www.turing.ac.uk/news/airsenal"
-                      >[Blog post]</a
-                    >.
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/alan-turing-institute/WorldCupPrediction"
-                      ><em>AIrgentina</em></a
-                    >
-                    is a model for predicting the results for the 2022 World Cup
-                    using a framework based on the team-level model used in the
-                    AIrsenal. We modified AIrsenal to make it more suited to
-                    predicting international results, and our resulting
-                    <em>AIrgentina</em> model came 6th in
-                    <a
-                      href="https://twitter.com/Futbolmetrix1/status/1604584845942087681"
-                      >@Futbolmetrix1's WC2022 Sophisticated Prediction
-                      Contest</a
-                    >
-                    outperforming models developed by FiveThirtyEight, Opta and
-                    Betfair!
-                    <a
-                      href="https://www.turing.ac.uk/blog/can-our-algorithm-predict-winner-2022-football-world-cup"
-                      >[Blog post]</a
-                    >.
-                    <ul>
-                      <li>
-                        Our model also got picked up by The
-                        <a
-                          href="https://www.newscientist.com/article/2347699-brazil-picked-as-2022-world-cup-winners-by-alan-turing-institute-model/"
-                          >New Scientist</a
-                        >.
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                Recommendation Systems for Podcast Discovery (ATI Data Study
-                Group, April 2021)
-                <ul>
-                  <li>
-                    Participated in a project with Entale to develop podcast
-                    recommendation systems, where I primarily worked on
-                    developing a topic model to recommend new podcasts based on
-                    the similarity to the topics that have been of interest to a
-                    listener previously.
-                  </li>
-                  <li>
-                    Allowed me to gain some general experience working with
-                    natural language processing methods, collaborative
-                    filtering, text mining, clustering algorithms, dimension
-                    reduction techniques and recommender systems using Python.
-                    <a
-                      href="https://www.turing.ac.uk/news/publications/data-study-group-final-report-entale"
-                      >[Report]</a
-                    >.
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                Bayesian Sports Modelling
-                <ul>
-                  <li>
-                    In my masters project, I investigated the applicability of
-                    Bayesian hierarchical models for predicting the outcome of
-                    football matches. We were able to develop models that
-                    achieved a greater prediction accuracy than existing models
-                    in the literature.
-                  </li>
-                  <li>
-                    R and Stan were used to implement various models; the code
-                    and report can be found
-                    <a href="https://github.com/rchan26/football_stan">here</a>.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <!-- <article>
-              <h4>Research Interests</h4>
-              <ul>
-                <li>Machine Learning</li>
-                <li>Natural Language Processing</li>
-                <li>Evaluating LLMs</li>
-                <li>Deep Learning and AI</li>
-              </ul>
-            </article> -->
-
-            <article>
-              <h4>
-                Selected Publications (<a
-                  href="https://scholar.google.co.uk/citations?user=P9x-aK0AAAAJ&hl=en"
-                  >Google Scholar</a
-                >)
-              </h4>
-              <ul>
-                <li>
-                  Daub, E. G. et al. Technical overview and architecture of the
-                  FastNet Machine Learning weather prediction model, version
-                  1.0. 2025.
-                  <a href="https://arxiv.org/abs/2509.17658">[Report]</a>.
-                </li>
-                <li>
-                  Dunston, T. et al. FastNet: Improving the physical consistency
-                  of machine-learning weather prediction models through loss
-                  function design. 2025.
-                  <a href="https://arxiv.org/abs/2509.17601">[Pre-print]</a>.
-                </li>
-                <li>
-                  <b>Chan, R.S.Y.</b>, Nanni, F., Lazauskas, T., Wood, R., Yong,
-                  P., Tarassenko, L., Girolami, M., Geddes, J., Duncan, A.
-                  Retrieval-augmented reasoning with lean language models. 2025.
-                  <a href="https://arxiv.org/abs/2508.11386">[Report]</a>.
-                </li>
-                <li>
-                  Bowler, E., Byrne, J., Leclerc, L.M., Roberto-Charron, A.,
-                  Rogers, M.S.J., Cavanagh, R.D., Harasimo, J., Lancaster, M.L.,
-                  <b>Chan, R.S.Y.</b>, Strickson, O., Wilkinson, J., Downie, R.,
-                  Hosking, J.S. and Andersson, T.R. AI sea ice forecasts for
-                  Arctic conservation: A case study predicting the timing of
-                  caribou sea ice migrations. 2025.
-                  <em>Ecological Solutions and Evidence</em>.
-                  <a
-                    href="https://besjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/2688-8319.70034"
-                    >[Paper]</a
-                  >.
-                </li>
-                <li>
-                  <b>Chan, R.S.Y.</b>, Nanni, F., Brown, E., Chapman, E.,
-                  Williams, A.R., Bright, J., Gabasova, E. Prompto: An open
-                  source library for asynchronous querying of LLM endpoints.
-                  2025. In
-                  <em
-                    >Proceedings of the 2025 Conference of the Nations of the
-                    Americas Chapter of the Association for Computational
-                    Linguistics: Human Language Technologies</em
-                  >.
-                  <a href="https://aclanthology.org/2025.naacl-demo.11/"
-                    >[Paper]</a
-                  >.
-                </li>
-                <li>
-                  Williams, A.R., Burke-Moore, L., <b>Chan, R.S.Y.</b>, Enock,
-                  F.E., Nanni, F., Sippy, T., Chung, Y.L., Gabasova, E.,
-                  Hackenburg, K., Bright, J. Large language models can
-                  consistently generate high-quality content for election
-                  disinformation operations. 2025. <em>PLoS ONE</em>.
-                  <a
-                    href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0317421"
-                    >[Paper]</a
-                  >.
-                </li>
-                <li>
-                  Alam, N., Kanjula, K.R., Guthikonda, S., Chung, T., Vegesna,
-                  B.K.S., Das, A., Susevski, A., <b>Chan, R.S.Y.</b>, Uddin,
-                  S.M., Islam, S.B., Santhosh, R., Sharma, D., Liu, C.,
-                  Chaturvedi, I., Winata, G.I., Mukherjee, S., Aji, A.F. 2025.
-                  In
-                  <em>CVPR 2025 Workshop Vision Language Models For All.</em>
-                  <a href="https://openreview.net/pdf?id=C3PsmuhDq0">[Paper]</a
-                  >.
-                </li>
-                <li>
-                  Tseriotou, T., <b>Chan, R.S.Y.</b>, Tsakalidis, A., Bilal,
-                  I.M., Kochkina, E., Lyons, T., Liakata, M. Sig-Networks
-                  Toolkit: Signature Networks for Longitudinal Language
-                  Modelling. 2024. In
-                  <em
-                    >Proceedings of the 18th Conference of the European Chapter
-                    of the Association for Computational Linguistics: System
-                    Demonstrations</em
-                  >.
-                  <a href="https://aclanthology.org/2024.eacl-demo.24/"
-                    >[Paper]</a
-                  >.
-                </li>
-                <li>
-                  Mougan, C., Plant, R., Teng, C., Bazzi, M., Ejea, A.C.,
-                  <b>Chan, R.S.Y.</b>, Jasin, D.S., Stoffel, M., Whitaker, K.J.
-                  and Manser, J. 2023. How to Data in Datathons. In
-                  <em
-                    >37th Conference on Neural Information Processing Systems
-                    (NeurIPS 2023) Track on Datasets and Benchmark.</em
-                  >
-                  <a href="https://arxiv.org/pdf/2309.09770.pdf">[Paper]</a>.
-                </li>
-                <li>
-                  <b>Chan, R.S.Y.</b>, Johansen, A.M., Pollock, M., and Roberts,
-                  G.O. 2023. Divide-and-Conquer Fusion.
-                  <em>The Journal of Machine Learning Research</em>.
-                  <a href="https://jmlr.org/papers/v24/21-1274.html">[Paper]</a
-                  >.
-                </li>
-              </ul>
-            </article>
-
-            <article>
-              <h4>Talks, Conferences and Awards</h4>
-              <br />
-              <b>Awards</b><br /><br />
-              C4AI Expedition Aya 2024: Most Promising Award for Maya:
-              Multimodal Aya<br />
-              <a
-                href="https://www.turing.ac.uk/people/doctoral-students/ryan-chan"
-                target="_blank"
-                >The Alan Turing Institute Doctoral Studentship (2018-2022)</a
-              ><br />
-              The Royal Statistical Society Prize (2018)<br />
-              The Top 10 Scholarship, awarded to the top 10 undergraduate
-              students at the
-              <a href="https://eps.leeds.ac.uk/maths"
-                >School of Mathematics, University of Leeds</a
-              >
-              (2015, 2016, 2017)<br />
-              Summer Vacation Bursary Scheme, awarded to undertake a research
-              project with the
-              <a href="https://eps.leeds.ac.uk/maths"
-                >School of Mathematics, University of Leeds</a
-              >
-              (2016, 2017)<br />
-              <br />
-              <br />
-              <b id="Presentations">Presentations</b><br /><br />
-              <a
-                href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/55-mechanistic-interpretability-iii/mech-interp-iii.pdf"
-                target="_blank"
-                >Robots in Disguise: Mechanistic Interpretability III - Sparse
-                Autoencoders. 20/11/24</a
-              >.<br />
-              <a
-                href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/49-mechanistic-interpretability-ii/mech-interp-ii.pdf"
-                target="_blank"
-                >Robots in Disguise: Mechanistic Interpretability II - Circuits
-                and Superposition. 02/10/24</a
-              >.<br />
-              <a
-                href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/48-mechanistic-interpretability-i/mech-interp-i.pdf"
-                target="_blank"
-                >Robots in Disguise: Mechanistic Interpretability I -
-                Introduction. 23/09/24</a
-              >.<br />
-              <a
-                href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/43-llama31/llama-3-1.pdf"
-                target="_blank"
-                >Robots in Disguise: An overview of Llama 3.1. 12/08/24</a
-              >.<br />
-              <a
-                href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/09-vision-transformers-part-i/vision_transformer_part1_hut23_robots_in_disguise.pdf"
-                target="_blank"
-                >Robots in Disguise: Vision Transformers. 07/08/23</a
-              >.<br />
-              <a
-                href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/08-gpt/gpt_hut23_robots_in_disguise.pdf"
-                target="_blank"
-                >Robots in Disguise: GPT. 24/07/23</a
-              >.<br />
-              <a
-                href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/07-bert/bert_hut23_robots_in_disguise.pdf"
-                target="_blank"
-                >Robots in Disguise: BERT. 07/07/23</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/greek_stochastics_07_07_2023.pdf"
-                target="_blank"
-                >Greek Stochastics Nu [Naxos]. 07/07/23</a
-              >.<br />
-              <a
-                href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/06-transformers-architecture/transformer_architecture_hut23_robots_in_disguise.pdf"
-                target="_blank"
-                >Robots in Disguise: Transformer Encoder and Decoder models.
-                26/06/23</a
-              >.<br />
-              <a
-                href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/04-seq2seq-part-ii/seq2seq_part2_hut23_robots_in_disguise.pdf"
-                target="_blank"
-                >Robots in Disguise: Sequence-to-sequence models: Part II -
-                Encoder-Decoder models. 03/05/23</a
-              >.<br />
-              <a
-                href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/03-seq2seq-part-i/seq2seq_part1_hut23_robots_in_disguise.pdf"
-                target="_blank"
-                >Robots in Disguise: Sequence-to-sequence models: Part I -
-                RNNs/LSTMs. 17/04/23</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/AIUK_21_03_2023.pdf"
-                target="_blank"
-                >AIUK Demo (IceNet) [London]. 2023. 21/03/23</a
-              >.<br />
-              <a
-                href="https://github.com/rchan26/rchan26.github.io/blob/main/pdfs/talks/bayesian_inference_talk_part_ii/part_ii.ipynb"
-                target="_blank"
-                >Lunchtime Tech Talk [The Alan Turing Institute]. 25/10/22</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/ISBA_2022_28_06_22.pdf"
-                target="_blank"
-                >2022 World Meeting of the International Society for Bayesian
-                Analysis [Montreal]. 28/06/22</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/entale_presentation.pdf"
-                target="_blank"
-                >Data Study Group (April 2021) Entale [The Alan Turing
-                Institute]. 29/04/21</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/yrm_09_02_2021.pdf"
-                target="_blank"
-                >Young Researchers' Meetings (YRM) [University of Warwick].
-                09/02/21</a
-              >.
-              <br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/newcastle_10_07_2020.pdf"
-                target="_blank"
-                >Statistics Group Seminar [Newcastle University]. 10/07/20</a
-              >.
-              <br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/ScaLE_discussion_presentation.pdf"
-                target="_blank"
-                >RSS Discussion Meeting for "Quasi-stationary Monte Carlo
-                methods and the ScaLE Algorithm" [The Royal Statistical
-                Society]. 24/06/20</a
-              >.
-              <a
-                href="https://www.youtube.com/watch?v=JzpvoHZccME&t=5481s"
-                target="_blank"
-                ><i class="icon-paper-clip"></i>[Video]</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/turing_21_04_2020.pdf"
-                target="_blank"
-                >The Student Seminar Series [The Alan Turing Institute].
-                21/04/20</a
-              >.
-              <br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/gregynog_24_03_2020.pdf"
-                target="_blank"
-                >University of Warwick Departmental Conference [Gregynog].
-                24/03/20</a
-              >.
-              <br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/algorithms_08_03_2019.pdf"
-                target="_blank"
-                >Algorithms & Computationally Intensive Inference Seminar
-                [University of Warwick]. 08/03/19</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/talks/bayesian_sports_modelling_presentation.pdf"
-                target="_blank"
-                >Student Seminar [University of Leeds]. 22/05/18</a
-              >.
-              <a
-                href="https://rchan26.github.io/pdfs/talks/bayesian_sports_modelling_handout.pdf"
-                target="_blank"
-                >[Handout]</a
-              >.<br />
-              <br />
-              <b>Posters</b><br /><br />
-              <a
-                href="https://rchan26.github.io/pdfs/posters/ISBA_2022_poster.pdf"
-                target="_blank"
-                >2022 World Meeting of the International Society for Bayesian
-                Analysis [Montreal]. 28/06/22</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/posters/CIRM_2021_poster.pdf"
-                target="_blank"
-                >Bayes at CIRM 2021 [Marseille]. 25/10/21</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/posters/ISBA_2021_poster.pdf"
-                target="_blank"
-                >2021 World Meeting of the International Society for Bayesian
-                Analysis [Online]. 28/06/21</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/posters/turing_2020_poster.pdf"
-                target="_blank"
-                >The Turing Research Showcase [Online]. 24/09/20</a
-              >.
-              <a
-                href="https://www.youtube.com/watch?v=yCLs7IJG-Jw&feature=youtu.be"
-                >[Video]</a
-              >.<br />
-              <a
-                href="https://rchan26.github.io/pdfs/posters/greek_stochastics_2019_poster.pdf"
-                target="_blank"
-                >Greek Stochastics Lambda [Corfu]. 28/08/19</a
-              >.
-              <br />
-              <a
-                href="https://rchan26.github.io/pdfs/posters/obayes_2019_poster.pdf"
-                target="_blank"
-                >O'Bayes 2019 [University of Warwick]. 29/06/19</a
-              >.
-              <br />
-              <br />
-            </article>
-            <article>
-              <h4>Miscellaneous</h4>
-              <a href="https://strava.app.link/VWKSfx7HGKb"
-                >Cycling from Manchester to London</a
-              >
-              for
-              <a
-                href="https://ambitious220.ambitiousaboutautism.org.uk/fundraisers/ryanchan/manchester-to-london"
-                target="_blank"
-                >Ambitious for Autism</a
-              ><br />
-              Thesis:
-              <a
-                href="https://rchan26.github.io/pdfs/miscellaneous/Ryan_Chan_phd_thesis_corrected.pdf"
-                >Monte Carlo methods for combining sample approximations of
-                distributions</a
-              >; Examined by Professor Nicolas Chopin and Dr. Krzysztof
-              Łatuszyński<br />
-              Advent of Code 2022
-              <a
-                href="https://github.com/alan-turing-institute/advent-of-code-2022"
-                >with Julia</a
-              ><br />
-              R package to implement Fusion methodologies (for unifying
-              distributed analyses):
-              <a href="https://github.com/rchan26/DCFusion" target="_blank"
-                >DCFusion</a
-              ><br />
-              R package to simulate layered Brownian bridges:
-              <a href="https://github.com/rchan26/layeredBB" target="_blank"
-                >layeredBB</a
-              ><br />
-              Advent of Code 2021
-              <a
-                href="https://github.com/alan-turing-institute/advent-of-code-2021"
-                >with R</a
-              ><br />
-              Masters Thesis:
-              <a
-                href="https://rchan26.github.io/pdfs/miscellaneous/bayesian_sports_modelling.pdf"
-                target="_blank"
-                >Bayesian Sports Modelling</a
-              ><br />
-              Undergraduate project:
-              <a
-                href="https://rchan26.github.io/pdfs/miscellaneous/automatic_puzzle_solving.pdf"
-                target="_blank"
-                >Automatic Puzzle Solving</a
-              ><br />
-              Fundraising for FareShare:
-              <a
-                href="https://www.justgiving.com/fundraising/Ryan-Chan26"
-                target="_blank"
-                >Cycling challenge</a
-              >
-            </article>
-          </div>
-        </section>
-      </div>
-
-      <section id="footer">
-        <div class="container">
-          <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-          </ul>
         </div>
-      </section>
-    </div>
+      </header>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+      <hr />
+
+      <section id="about">
+        <p>
+          I&rsquo;m a senior research associate focusing on end-to-end
+          machine-learning weather forecasting. In particular, I&rsquo;m working
+          on <em>Project Cumulus</em>, an initiative to develop bespoke
+          data-driven weather subseasonal forecasting systems tailored for
+          farming communities in West Africa.
+        </p>
+        <p>
+          I have a background in statistics, machine learning and software
+          engineering. I hold a PhD in Statistics from the
+          <a href="https://warwick.ac.uk/fac/sci/statistics/"
+            >University of Warwick</a
+          >, supervised by
+          <a
+            href="https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/roberts/"
+            >Professor Gareth Roberts</a
+          >
+          and
+          <a
+            href="https://www.ncl.ac.uk/maths-physics/people/profile/murraypollock.html"
+            >Professor Murray Pollock</a
+          >. In my PhD, I focused on developing Monte Carlo methods for
+          combining distributed statistical analyses (<em
+            ><a href="https://jmlr.org/papers/v24/21-1274.html">Fusion</a></em
+          >). I completed my undergraduate studies at the
+          <a href="https://eps.leeds.ac.uk/maths">University of Leeds</a>, where
+          I was awarded a first class honours MMath Mathematics degree and
+          received the Royal Statistical Society Prize.
+        </p>
+      </section>
+
+      <hr />
+
+      <section id="research">
+        <h2>Research &amp; Projects</h2>
+        <p>
+          I am interested in applying machine learning to environment and
+          sustainability problems and currently focusing on end-to-end
+          data-driven weather forecasting.
+        </p>
+
+        <h3>Current</h3>
+        <ul>
+          <li>
+            <strong>Project Cumulus</strong> &mdash; Data-driven forecasting
+            systems to support farming communities in West Africa. Leading
+            development of observationally driven models for global sub-seasonal
+            forecasting.
+            <a
+              href="https://www.cam.ac.uk/research/news/ai-weather-forecasting-initiative-to-strengthen-climate-resilience-in-west-africa"
+              >[Press release]</a
+            >
+          </li>
+        </ul>
+
+        <h3>Previous</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.turing.ac.uk/research/research-projects/fastnet"
+              ><strong>FastNet: AI for Numerical Weather Prediction</strong></a
+            >
+            &mdash; A Graph Neural Network for medium-range weather forecasting,
+            developed in collaboration between the Met Office and The Alan
+            Turing Institute.
+            <a href="https://arxiv.org/abs/2509.17658">[Technical report]</a>
+            <a href="https://arxiv.org/abs/2509.17601">[Pre-print]</a>
+          </li>
+          <li>
+            <a
+              href="https://www.turing.ac.uk/research/research-projects/project-t0"
+              ><strong>Project t0</strong></a
+            >
+            &mdash; Lean language models using knowledge retrieval and
+            fine-tuning for reasoning and test-time scaling.
+            <a
+              href="https://www.turing.ac.uk/blog/why-we-still-need-small-language-models-even-age-frontier-ai"
+              >[Blog]</a
+            >
+            <a href="https://arxiv.org/abs/2508.11386">[Technical report]</a>
+            <a href="https://github.com/alan-turing-institute/t0-1">[Code]</a>
+          </li>
+          <li>
+            <a href="https://github.com/alan-turing-institute/prompto"
+              ><strong>prompto</strong></a
+            >
+            &mdash; Open source software for reproducible experiments on LLMs at
+            scale, supporting self-hosted and API-based models.
+            <a href="https://aclanthology.org/2025.naacl-demo.11/"
+              >[NAACL 2025]</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/datasig-ac-uk"
+              ><strong>Rough Paths</strong></a
+            >
+            &mdash; Software and applications of rough path theory and path
+            signatures for complex data streams, with applications in NLP.
+            <ul>
+              <li>
+                <a href="https://github.com/datasig-ac-uk/nlpsig">nlpsig</a>:
+                Python library for constructing paths of transformer embeddings.
+              </li>
+              <li>
+                <a href="https://github.com/ttseriotou/sig-networks"
+                  >sig-networks</a
+                >: PyTorch library for signature neural networks for
+                longitudinal NLP.
+                <a href="https://aclanthology.org/2024.eacl-demo.24/"
+                  >[EACL 2024]</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/datasig-ac-uk/signature_mahalanobis_knn"
+                  >SigMahaKNN</a
+                >: Anomaly detection on multivariate streams using path
+                signatures.
+                <a href="https://arxiv.org/abs/2006.03487">[Paper]</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://github.com/icenet-ai"><strong>IceNet</strong></a>
+            &mdash; Probabilistic deep learning sea ice forecasting system led
+            by British Antarctic Survey and The Alan Turing Institute.
+            <a href="https://www.nature.com/articles/s41467-021-25257-4"
+              >[Nature Communications]</a
+            >
+            Nominated for the
+            <a
+              href="https://www.arcticcircle.org/frederik-paulsen-arctic-academic-action-award"
+              >Arctic Circle Frederik Paulsen Award</a
+            >.
+          </li>
+        </ul>
+
+        <h3>Miscellaneous</h3>
+        <ul>
+          <li>
+            <strong>Maya</strong> &mdash; Multilingual multimodal model based on
+            Cohere&rsquo;s Aya and LLaVA, part of
+            <a href="https://sites.google.com/cohere.com/expedition-aya/home"
+              >C4AI&rsquo;s Expedition Aya 2024</a
+            >.
+            <a
+              href="https://www.linkedin.com/posts/cohere-for-ai_c4ai-expedition-aya-most-promising-prize-activity-7242140355003891712-kGkD"
+              >Won the Most Promising Award</a
+            >.
+            <a href="https://openreview.net/pdf?id=C3PsmuhDq0"
+              >[CVPR 2025 Workshop]</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/alan-turing-institute/reginald"
+              ><strong>Reginald</strong></a
+            >
+            &mdash; LLM chatbot for The Alan Turing Institute using RAG and
+            llama-index, deployed on the Turing&rsquo;s Slack workspace.
+          </li>
+          <li>
+            <a href="https://github.com/alan-turing-institute/AIrsenal"
+              >AIrsenal</a
+            >
+            &amp;
+            <a
+              href="https://github.com/alan-turing-institute/WorldCupPrediction"
+              >AIrgentina</a
+            >
+            &mdash; Machine learning for Fantasy Premier League and World Cup
+            prediction. AIrgentina came 6th in
+            <a
+              href="https://twitter.com/Futbolmetrix1/status/1604584845942087681"
+              >@Futbolmetrix1&rsquo;s WC2022 contest</a
+            >, outperforming FiveThirtyEight, Opta, and Betfair.
+            <a
+              href="https://www.turing.ac.uk/blog/can-our-algorithm-predict-winner-2022-football-world-cup"
+              >[Blog]</a
+            >
+            <a
+              href="https://www.newscientist.com/article/2347699-brazil-picked-as-2022-world-cup-winners-by-alan-turing-institute-model/"
+              >[New Scientist]</a
+            >
+          </li>
+          <li>
+            <strong>Podcast recommendation systems</strong> &mdash; Topic
+            modelling and collaborative filtering for podcast discovery, with
+            Entale at ATI Data Study Group (April 2021).
+            <a
+              href="https://www.turing.ac.uk/news/publications/data-study-group-final-report-entale"
+              >[Report]</a
+            >
+          </li>
+          <li>
+            <strong>Bayesian Sports Modelling</strong> &mdash; Bayesian
+            hierarchical models for football match prediction (masters project).
+            <a href="https://github.com/rchan26/football_stan">[Code]</a>
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section id="publications">
+        <h2>Selected Publications</h2>
+        <ul class="pub-list">
+          <li>
+            Daub, E. G. et al. Technical overview and architecture of the
+            FastNet Machine Learning weather prediction model, version 1.0.
+            2025. <a href="https://arxiv.org/abs/2509.17658">[Report]</a>
+          </li>
+          <li>
+            Dunston, T. et al. FastNet: Improving the physical consistency of
+            machine-learning weather prediction models through loss function
+            design. 2025.
+            <a href="https://arxiv.org/abs/2509.17601">[Pre-print]</a>
+          </li>
+          <li>
+            <strong>Chan, R.S.Y.</strong>, Nanni, F., Lazauskas, T., Wood, R.,
+            Yong, P., Tarassenko, L., Girolami, M., Geddes, J., Duncan, A.
+            Retrieval-augmented reasoning with lean language models. 2025.
+            <a href="https://arxiv.org/abs/2508.11386">[Report]</a>
+          </li>
+          <li>
+            Bowler, E. et al. AI sea ice forecasts for Arctic conservation: A
+            case study predicting the timing of caribou sea ice migrations.
+            2025. <em>Ecological Solutions and Evidence</em>.
+            <a
+              href="https://besjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/2688-8319.70034"
+              >[Paper]</a
+            >
+          </li>
+          <li>
+            <strong>Chan, R.S.Y.</strong>, Nanni, F., Brown, E., Chapman, E.,
+            Williams, A.R., Bright, J., Gabasova, E. Prompto: An open source
+            library for asynchronous querying of LLM endpoints. 2025. In
+            <em>Proceedings of NAACL 2025</em>.
+            <a href="https://aclanthology.org/2025.naacl-demo.11/">[Paper]</a>
+          </li>
+          <li>
+            Williams, A.R., Burke-Moore, L., <strong>Chan, R.S.Y.</strong> et
+            al. Large language models can consistently generate high-quality
+            content for election disinformation operations. 2025.
+            <em>PLoS ONE</em>.
+            <a
+              href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0317421"
+              >[Paper]</a
+            >
+          </li>
+          <li>
+            Alam, N. et al. Maya: Multimodal Aya. 2025. In
+            <em>CVPR 2025 Workshop Vision Language Models For All</em>.
+            <a href="https://openreview.net/pdf?id=C3PsmuhDq0">[Paper]</a>
+          </li>
+          <li>
+            Tseriotou, T., <strong>Chan, R.S.Y.</strong>, Tsakalidis, A., Bilal,
+            I.M., Kochkina, E., Lyons, T., Liakata, M. Sig-Networks Toolkit:
+            Signature Networks for Longitudinal Language Modelling. 2024. In
+            <em>Proceedings of EACL 2024</em>.
+            <a href="https://aclanthology.org/2024.eacl-demo.24/">[Paper]</a>
+          </li>
+          <li>
+            Mougan, C. et al. How to Data in Datathons. 2023. In
+            <em>NeurIPS 2023 Datasets and Benchmarks Track</em>.
+            <a href="https://arxiv.org/pdf/2309.09770.pdf">[Paper]</a>
+          </li>
+          <li>
+            <strong>Chan, R.S.Y.</strong>, Johansen, A.M., Pollock, M., and
+            Roberts, G.O. Divide-and-Conquer Fusion. 2023.
+            <em>Journal of Machine Learning Research</em>.
+            <a href="https://jmlr.org/papers/v24/21-1274.html">[Paper]</a>
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section id="talks">
+        <h2>Talks, Conferences &amp; Awards</h2>
+
+        <h3>Awards</h3>
+        <ul>
+          <li>
+            C4AI Expedition Aya 2024: Most Promising Award for Maya: Multimodal
+            Aya
+          </li>
+          <li>
+            <a
+              href="https://www.turing.ac.uk/people/doctoral-students/ryan-chan"
+              >The Alan Turing Institute Doctoral Studentship</a
+            >
+            (2018&ndash;2022)
+          </li>
+          <li>The Royal Statistical Society Prize (2018)</li>
+          <li>
+            The Top 10 Scholarship,
+            <a href="https://eps.leeds.ac.uk/maths"
+              >School of Mathematics, University of Leeds</a
+            >
+            (2015, 2016, 2017)
+          </li>
+          <li>
+            Summer Vacation Bursary Scheme,
+            <a href="https://eps.leeds.ac.uk/maths"
+              >School of Mathematics, University of Leeds</a
+            >
+            (2016, 2017)
+          </li>
+        </ul>
+
+        <h3>Presentations</h3>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/55-mechanistic-interpretability-iii/mech-interp-iii.pdf"
+              >Robots in Disguise: Mechanistic Interpretability III &mdash;
+              Sparse Autoencoders</a
+            >. 20/11/24
+          </li>
+          <li>
+            <a
+              href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/49-mechanistic-interpretability-ii/mech-interp-ii.pdf"
+              >Robots in Disguise: Mechanistic Interpretability II &mdash;
+              Circuits and Superposition</a
+            >. 02/10/24
+          </li>
+          <li>
+            <a
+              href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/48-mechanistic-interpretability-i/mech-interp-i.pdf"
+              >Robots in Disguise: Mechanistic Interpretability I &mdash;
+              Introduction</a
+            >. 23/09/24
+          </li>
+          <li>
+            <a
+              href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/43-llama31/llama-3-1.pdf"
+              >Robots in Disguise: An overview of Llama 3.1</a
+            >. 12/08/24
+          </li>
+          <li>
+            <a
+              href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/09-vision-transformers-part-i/vision_transformer_part1_hut23_robots_in_disguise.pdf"
+              >Robots in Disguise: Vision Transformers</a
+            >. 07/08/23
+          </li>
+          <li>
+            <a
+              href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/08-gpt/gpt_hut23_robots_in_disguise.pdf"
+              >Robots in Disguise: GPT</a
+            >. 24/07/23
+          </li>
+          <li>
+            <a
+              href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/07-bert/bert_hut23_robots_in_disguise.pdf"
+              >Robots in Disguise: BERT</a
+            >. 07/07/23
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/talks/greek_stochastics_07_07_2023.pdf"
+              >Greek Stochastics Nu [Naxos]</a
+            >. 07/07/23
+          </li>
+          <li>
+            <a
+              href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/06-transformers-architecture/transformer_architecture_hut23_robots_in_disguise.pdf"
+              >Robots in Disguise: Transformer Encoder and Decoder models</a
+            >. 26/06/23
+          </li>
+          <li>
+            <a
+              href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/04-seq2seq-part-ii/seq2seq_part2_hut23_robots_in_disguise.pdf"
+              >Robots in Disguise: Sequence-to-sequence models Part II</a
+            >. 03/05/23
+          </li>
+          <li>
+            <a
+              href="https://github.com/alan-turing-institute/robots-in-disguise/blob/main/sessions/03-seq2seq-part-i/seq2seq_part1_hut23_robots_in_disguise.pdf"
+              >Robots in Disguise: Sequence-to-sequence models Part I</a
+            >. 17/04/23
+          </li>
+          <li>
+            <a href="https://rchan26.github.io/pdfs/talks/AIUK_21_03_2023.pdf"
+              >AIUK Demo (IceNet) [London]</a
+            >. 21/03/23
+          </li>
+          <li>
+            <a
+              href="https://github.com/rchan26/rchan26.github.io/blob/main/pdfs/talks/bayesian_inference_talk_part_ii/part_ii.ipynb"
+              >Lunchtime Tech Talk [The Alan Turing Institute]</a
+            >. 25/10/22
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/talks/ISBA_2022_28_06_22.pdf"
+              >2022 World Meeting of the International Society for Bayesian
+              Analysis [Montreal]</a
+            >. 28/06/22
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/talks/entale_presentation.pdf"
+              >Data Study Group (April 2021) Entale [The Alan Turing
+              Institute]</a
+            >. 29/04/21
+          </li>
+          <li>
+            <a href="https://rchan26.github.io/pdfs/talks/yrm_09_02_2021.pdf"
+              >Young Researchers&rsquo; Meetings [University of Warwick]</a
+            >. 09/02/21
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/talks/newcastle_10_07_2020.pdf"
+              >Statistics Group Seminar [Newcastle University]</a
+            >. 10/07/20
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/talks/ScaLE_discussion_presentation.pdf"
+              >RSS Discussion Meeting &mdash; &ldquo;Quasi-stationary Monte
+              Carlo and ScaLE&rdquo; [The Royal Statistical Society]</a
+            >. 24/06/20
+            <a href="https://www.youtube.com/watch?v=JzpvoHZccME&t=5481s"
+              >[Video]</a
+            >
+          </li>
+          <li>
+            <a href="https://rchan26.github.io/pdfs/talks/turing_21_04_2020.pdf"
+              >The Student Seminar Series [The Alan Turing Institute]</a
+            >. 21/04/20
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/talks/gregynog_24_03_2020.pdf"
+              >University of Warwick Departmental Conference [Gregynog]</a
+            >. 24/03/20
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/talks/algorithms_08_03_2019.pdf"
+              >Algorithms &amp; Computationally Intensive Inference Seminar
+              [University of Warwick]</a
+            >. 08/03/19
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/talks/bayesian_sports_modelling_presentation.pdf"
+              >Student Seminar [University of Leeds]</a
+            >. 22/05/18
+            <a
+              href="https://rchan26.github.io/pdfs/talks/bayesian_sports_modelling_handout.pdf"
+              >[Handout]</a
+            >
+          </li>
+        </ul>
+
+        <h3>Posters</h3>
+        <ul>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/posters/ISBA_2022_poster.pdf"
+              >2022 World Meeting of the International Society for Bayesian
+              Analysis [Montreal]</a
+            >. 28/06/22
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/posters/CIRM_2021_poster.pdf"
+              >Bayes at CIRM 2021 [Marseille]</a
+            >. 25/10/21
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/posters/ISBA_2021_poster.pdf"
+              >2021 World Meeting of the International Society for Bayesian
+              Analysis [Online]</a
+            >. 28/06/21
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/posters/turing_2020_poster.pdf"
+              >The Turing Research Showcase [Online]</a
+            >. 24/09/20
+            <a
+              href="https://www.youtube.com/watch?v=yCLs7IJG-Jw&feature=youtu.be"
+              >[Video]</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/posters/greek_stochastics_2019_poster.pdf"
+              >Greek Stochastics Lambda [Corfu]</a
+            >. 28/08/19
+          </li>
+          <li>
+            <a
+              href="https://rchan26.github.io/pdfs/posters/obayes_2019_poster.pdf"
+              >O&rsquo;Bayes 2019 [University of Warwick]</a
+            >. 29/06/19
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section id="misc">
+        <h2>Miscellaneous</h2>
+        <ul>
+          <li>
+            <a href="https://strava.app.link/VWKSfx7HGKb"
+              >Cycling from Manchester to London</a
+            >
+            for
+            <a
+              href="https://ambitious220.ambitiousaboutautism.org.uk/fundraisers/ryanchan/manchester-to-london"
+              >Ambitious for Autism</a
+            >
+          </li>
+          <li>
+            PhD Thesis:
+            <a
+              href="https://rchan26.github.io/pdfs/miscellaneous/Ryan_Chan_phd_thesis_corrected.pdf"
+              >Monte Carlo methods for combining sample approximations of
+              distributions</a
+            >; examined by Professor Nicolas Chopin and Dr. Krzysztof
+            Łatuszyński
+          </li>
+          <li>
+            Advent of Code 2022
+            <a
+              href="https://github.com/alan-turing-institute/advent-of-code-2022"
+              >with Julia</a
+            >
+          </li>
+          <li>
+            R package for Fusion methodologies:
+            <a href="https://github.com/rchan26/DCFusion">DCFusion</a>
+          </li>
+          <li>
+            R package for layered Brownian bridges:
+            <a href="https://github.com/rchan26/layeredBB">layeredBB</a>
+          </li>
+          <li>
+            Advent of Code 2021
+            <a
+              href="https://github.com/alan-turing-institute/advent-of-code-2021"
+              >with R</a
+            >
+          </li>
+          <li>
+            Masters Thesis:
+            <a
+              href="https://rchan26.github.io/pdfs/miscellaneous/bayesian_sports_modelling.pdf"
+              >Bayesian Sports Modelling</a
+            >
+          </li>
+          <li>
+            Undergraduate project:
+            <a
+              href="https://rchan26.github.io/pdfs/miscellaneous/automatic_puzzle_solving.pdf"
+              >Automatic Puzzle Solving</a
+            >
+          </li>
+          <li>
+            Fundraising for FareShare:
+            <a href="https://www.justgiving.com/fundraising/Ryan-Chan26"
+              >Cycling challenge</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        <hr />
+        <p>
+          Ryan Chan &middot;
+          <a href="mailto:ryanchan2607@gmail.com">ryanchan2607@gmail.com</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
