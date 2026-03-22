@@ -6,8 +6,8 @@ code in this repository.
 ## What This Is
 
 A static personal portfolio website for Ryan Chan, deployed via GitHub Pages at
-`rchan26.github.io`. Custom minimalist design using Gowun Batang (Google Fonts),
-with no external CSS frameworks or JavaScript dependencies.
+`rchan26.github.io`. Custom minimalist design with light and dark modes, no
+external CSS frameworks, and minimal JavaScript (theme toggle only).
 
 ## Development Commands
 
@@ -44,15 +44,29 @@ Prettier is the main formatting tool. Run it before committing changes to HTML.
 
 ## Architecture
 
-The site is a **single-page application** — all content and all CSS live in
-`index.html`. There are no external stylesheets, no JavaScript, and no Jekyll
-theme.
+The site is a **single-page application** — all content, CSS, and JS live in
+`index.html`. There are no external stylesheets and no Jekyll theme.
 
 - `index.html` — the entire site: inline `<style>` block + sections (header,
-  about, research & projects, publications, talks & awards, miscellaneous)
+  about, research & projects, publications, talks & awards, miscellaneous) +
+  inline `<script>` for the theme toggle
 - `images/` — profile photo (`profile.jpg`), favicon (`icon.png`)
 - `pdfs/` — papers, talks, posters, CV, thesis
 - `_config.yml` — minimal Jekyll config (title only; no theme)
+
+## Theming
+
+All colours and typography are driven by CSS custom properties on `:root` and
+`[data-theme="dark"]`. The toggle button sets `data-theme` on `<html>` and
+persists the choice in `localStorage`.
+
+- **Light mode** — warm cream background (`#fefae0`), Gowun Batang serif (Google
+  Fonts), amber-brown accents
+- **Dark mode** — solarized dark background (`#002b36`), `Lucida Console`
+  monospace at 18px, solarized blue/cyan link colours
+
+To change a colour in both modes, update the corresponding `--variable` in
+`:root` (light) and `[data-theme="dark"]` (dark).
 
 ## Content Updates
 
